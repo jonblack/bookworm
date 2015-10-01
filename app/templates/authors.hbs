@@ -1,0 +1,18 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-4 col-md-3">
+            <br>
+            <h3>Authors</h3>
+            <div class="list-group">
+                {{#each model as |author|}}
+                    {{#link-to "authors.books" author class="list-group-item"}}
+                        {{author.name}}
+                    {{/link-to}}
+                {{/each}}
+            </div>
+        </div>
+        <div class="col-sm-8 col-md-9">
+            {{outlet}}
+        </div>
+    </div>
+</div>

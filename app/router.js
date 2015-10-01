@@ -6,6 +6,9 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('authors', {path: '/authors'}, function() {
+      this.route('books', {path: '/:author_id/books'});
+  });
 });
 
 export default Router;
