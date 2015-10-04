@@ -1,0 +1,20 @@
+<nav class="navbar navbar-light bg-faded" style="margin-top: 10px;">
+    <!-- TODO: navbar-text not supported in bootstrap v4. -->
+    <p class="pull-left" style="margin-bottom: 0; padding-top: 0.425rem; padding-bottom: 0.425rem; color: rgba(0, 0, 0, 0.6);">
+        0 transctions selected
+    </p>
+</nav>
+
+<table class="table table-striped table-bordered">
+    <thead class="thead-inverse">
+        <tr>
+            <th style="width: 1px;"></th>
+            <th>Title</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each books as |book|}}
+            {{book-table-row book}}
+        {{/each}}
+    </tbody>
+</table>
