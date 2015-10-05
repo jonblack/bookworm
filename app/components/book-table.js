@@ -1,19 +1,26 @@
 import Ember from 'ember';
 
 var BookTable = Ember.Component.extend({
-    selectedBooks: [],
     actions: {
         change(bookId) {
             var selectedBooks = this.get('selectedBooks');
             var index = selectedBooks.indexOf(bookId);
             if (index === -1) {
-                selectedBooks.push(bookId);
+                selectedBooks.pushObject(bookId);
             } else {
-                selectedBooks.splice(index, 1);
+                selectedBooks.removeObject(bookId);
             }
             console.log(selectedBooks);
         }
-    }
+    },
+    init() {
+        this.set(`selectedBooks`, Ember.A([]));
+        this._super();
+    },
+    didUpdateAttrs() {
+        this.set(`selectedBooks`, Ember.A([]));
+        this._super();
+    },
 });
 
 BookTable.reopenClass({
