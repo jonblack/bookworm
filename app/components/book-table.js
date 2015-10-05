@@ -1,30 +1,22 @@
 import Ember from 'ember';
 
 var BookTable = Ember.Component.extend({
+    tableSelections: Ember.inject.service('table-selections'),
     actions: {
         change(bookId) {
-            var selectedBooks = this.get('selectedBooks');
-            var index = selectedBooks.indexOf(bookId);
-            if (index === -1) {
-                selectedBooks.pushObject(bookId);
+            var author = this.get('author');
+            var tableSelections = this.get('tableSelections');
+            if (tableSelections.isSelected(author.id, bookId)) {
+                tableSelections.remove(author.id, bookId);
             } else {
-                selectedBooks.removeObject(bookId);
+                tableSelections.add(author.id, bookId);
             }
-            console.log(selectedBooks);
         }
-    },
-    init() {
-        this.set(`selectedBooks`, Ember.A([]));
-        this._super();
-    },
-    didUpdateAttrs() {
-        this.set(`selectedBooks`, Ember.A([]));
-        this._super();
     },
 });
 
 BookTable.reopenClass({
-    positionalParams: ['books'],
+    positionalParams: ['author', 'books'],
 });
 
 export default BookTable;
