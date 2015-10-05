@@ -1,7 +1,7 @@
 <nav class="navbar navbar-light bg-faded" style="margin-top: 10px;">
     <!-- TODO: navbar-text not supported in bootstrap v4. -->
     <p class="pull-left" style="margin-bottom: 0; padding-top: 0.425rem; padding-bottom: 0.425rem; color: rgba(0, 0, 0, 0.6);">
-        0 transctions selected
+        {{selectedBooks.length}} books selected
     </p>
 </nav>
 
@@ -14,7 +14,7 @@
     </thead>
     <tbody>
         {{#each books as |book|}}
-            {{book-table-row book}}
+            {{book-table-row book select=(action 'change')}}
         {{/each}}
     </tbody>
 </table>
