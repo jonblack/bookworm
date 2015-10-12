@@ -1,16 +1,3 @@
 <br>
 <h3>Books</h3>
-<table class="table table-striped table-bordered">
-    <thead class="thead-inverse">
-        <tr>
-            <th>Title</th>
-        </tr>
-    </thead>
-    <tbody>
-        {{#each model.books as |book|}}
-            <tr>
-                <td>{{book.title}}</td>
-            </tr>
-        {{/each}}
-    </tbody>
-</table>
+{{book-table model.books}}
