@@ -1,12 +1,15 @@
-# Ember-model-based-sidebars
+# Ember Book Collection Example
 
-This is a sample Ember application to demostrate implementing a sidebar that
-displays model data.
+This is a sample Ember application that demonstrates various common patterns
+found in modern websites.
 
-![](screenshot.png)
+![](screenshots/model-based-sidebar.png)
 
-An explanation of the implementation can be found in the blog post
-[Model-based sidebars in Ember][1].
+The master branch contains the latest update to the application, with tags
+provided for specific features. There is an accompanying blog post for each
+tag:
+
+* [Model-based sidebars in Ember][1] under tag `model-based-sidebar`
 
 Start the application using `ember server` and the navigate to
 [http://localhost:4200/authors/1/books](http://localhost:4200/authors/1/books)
