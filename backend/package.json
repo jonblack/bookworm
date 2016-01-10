@@ -1,0 +1,25 @@
+{
+  "name": "book-collection-example-backend",
+  "version": "0.0.0",
+  "description": "Manage your book collection",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jonblack/ember-book-collection-example"
+  },
+  "bugs": {
+    "url": "https://github.com/jonblack/ember-book-collection-example/issues"
+  },
+  "scripts": {
+    "start": "./node_modules/.bin/gulp"
+  },
+  "dependencies": {
+    "jsonapi-serializer": "^2.0.4",
+    "jsonapi-server": "^1.1.0",
+    "jsonapi-store-mongodb": "^1.1.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-nodemon": "^2.0.6"
+  }
+}

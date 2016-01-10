@@ -1,0 +1,8 @@
+frontend:
+    environment:
+        - EMBER_ENV=development
+    volumes:
+        - "./frontend:/app"
+backend:
+    volumes:
+        - "./backend:/app"
